@@ -1,0 +1,32 @@
+﻿@model List<IndexTodoViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>List of ToDo's</h2>
+
+<a class="btn btn-primary" href="@Url.Action("Create", "Todo")">Create New</a>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Due Date</th>
+            <th>Date Created</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var record in Model)
+        {
+            <tr>
+                <td>@record.Title</td>
+                <td>@record.Description</td>
+                <td>@record.DueDate</td>
+                <td>@record.DateCreated</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

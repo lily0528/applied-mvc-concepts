@@ -1,0 +1,17 @@
+======================================
+		  SQL Exercises - #3
+======================================
+Useful links:
+https://www.w3schools.com/sql/sql_foreignkey.asp
+https://database.guide/the-3-types-of-relationships-in-database-design/
+https://www.w3schools.com/sql/sql_join_left.asp
+======================================
+
+1 - Introduce a new table named KillHistory. The purpose of this table is to create a history every time a monster has been killed. The table should contain the following fields:
+Id, MonsterId, Date (including time)
+
+2 - Create a relationship between Monsters and KillHistory (one-to-many; One monster can have many histories and one history belongs to one monster)
+
+3 - Populate some records in this table according to the monsters that you currently have.
+
+4 - Write a SQL query to display all monsters and the number of times they were killed. 

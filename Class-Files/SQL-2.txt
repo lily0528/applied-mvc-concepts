@@ -1,0 +1,22 @@
+======================================
+		  SQL Exercises - #2
+======================================
+Useful links:
+https://www.w3schools.com/sql/sql_foreignkey.asp
+https://database.guide/the-3-types-of-relationships-in-database-design/
+https://www.w3schools.com/sql/sql_join_inner.asp
+======================================
+
+1 - Introduce a new table named Difficulty with the following fields:
+Id, Name
+
+2 - Insert the following records:
+Easy
+Medium
+Hard
+
+3 - Create a relationship between Monsters and Difficulty (one-to-many; One monster can have one difficulty and one difficulty can be assigned to many monsters)
+
+4 - Update the monster table to reflect the information.
+
+5 - Write a SQL query to display all monsters and their respective difficulty. 

@@ -1,0 +1,54 @@
+﻿
+@model CreateMovieViewModel
+@*need to add webconfig, and then open this file again*@
+@{
+    ViewBag.Title = "Create";
+}
+
+@section scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+if rating set int, erromessage cant mention, need add up jqueryval can read 0 information.
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+        <h2>Create</h2>
+        <form method="post">
+            <div class="form-group">
+                @Html.LabelFor(p => p.Name,"Movie Name")
+                <label for="MovieName">Movie Name</label>
+                @Html.TextBoxFor(input => input.Name, new { @class = "form-control", placeholder = "Name" })
+                @Html.ValidationMessageFor(input => input.Name)
+            </div>
+            <div class="form-group">
+                <label for="Rating">Rating</label>
+                @Html.RadioButton("Rating", 1) 1
+                @Html.RadioButton("Rating", 2) 2
+                @Html.RadioButton("Rating", 3) 3
+                @Html.RadioButton("Rating", 4) 4
+                @Html.RadioButton("Rating", 5) 5
+                @*it is same function*@
+                @*@Html.RadioButtonFor(p => p.Rating,1)1*@
+            </div>
+            <div class="form-group">
+                @*<label for="Category">Category</label>*@
+                @Html.LabelFor(p => p.Category)
+                @Html.DropDownList("Category",
+                     new SelectList(Enum.GetValues(typeof(menu))),
+                     "Select menu",
+                     new { @class = "form-control" })
+                @*@Html.DropDownList(p => p.)*@
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+        
+    </div>
+</body>
+</html>

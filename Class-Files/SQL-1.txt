@@ -1,0 +1,39 @@
+======================================
+		  SQL Exercises - #1
+======================================
+Useful links:
+https://docs.microsoft.com/en-us/sql/relational-databases/databases/create-a-database?view=sql-server-2017
+https://www.sqlshack.com/crud-operations-in-sql-server/
+======================================
+
+PRO-TIP: Save your scripts as you creat them so you can restore the data at any point.
+
+1 - Create a database named "DBRPGGame"
+
+2 - Create a table named "Monsters" with the following fields:
+ID, Name, Strength, Defense, HP, Difficulty, DateCreated, DateUpdated
+
+3 - Insert the following six monsters to the database:
+1, Bat, 10, 3, 10, Easy, 2019-02-28, null
+2, Rat, 9, 5, 9, Easy, 2019-02-28, null
+3, Dworc, 15, 7, 25, Medium, 2019-02-28, null
+4, Gargoyle, 17, 10, 30, Medium, 2019-02-28, null
+5, Medusa, 20, 13, 40, Hard, 2019-02-28, null
+6, Warlock, 25, 18, 45, Hard, 2019-02-28, null
+
+4 - Perform the following selects:
+Select all the records.
+Select all records whose name contains the letters at.
+Select all records ordered by strength descending.
+Select all records whose defense is greather than 10.
+Group all records by difficulty and display the name of the difficulty and the number of monsters for each difficulty.******
+
+5 - Update the following information:
+Update the Strength to 16 for all records whose Difficulty is Medium.
+Update the Name to Reaper for all records whose Name is Medusa.
+Update the Defense to 15 for all records whose Difficulty is Hard.
+Update the DateUpdated to CURRENT_DATE for all records.
+
+6 - Delete all records whose Defense is < 6
+
+7 - Drop the database. 

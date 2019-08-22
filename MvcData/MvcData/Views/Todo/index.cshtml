@@ -1,0 +1,24 @@
+﻿@model List<Todo>
+@{
+    ViewBag.Title = "index";
+}
+
+<h2>index</h2>
+<table class="table tale-striped">
+    <thead>
+        <tr>Title</tr>
+        <tr>Description</tr>
+        <tr>Due Date</tr>
+    </thead>
+    <tbody>
+        @foreach(var record in Model)
+        {
+        <tr>
+            <td>@record.Title</td>
+            <td>@record.Description</td>
+            <td>@record.</td>
+        </tr>
+        }
+    </tbody>
+</table>
+

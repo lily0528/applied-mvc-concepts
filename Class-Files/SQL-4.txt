@@ -1,0 +1,16 @@
+======================================
+		  SQL Exercises - #4
+======================================
+Useful links:
+https://www.w3schools.com/sql/sql_foreignkey.asp
+https://database.guide/the-3-types-of-relationships-in-database-design/
+======================================
+
+1 - Introduce a new table named MonsterLocations. The purpose of this table is to show the location where a monster can possibly spawn. The table should contain the following fields:
+Id, LocationName
+
+2 - Create a relationship between Monsters and MonsterLocations (many-to-many; One monster can spawn in multiple locations and one location can have many monsters)
+
+3 - Populate some records.
+
+4 - Write a SQL query to display all monsters and their possible spawn locations. 

@@ -1,0 +1,36 @@
+﻿
+@model CreateTodoViewModel
+
+@{
+    ViewBag.Title = "Create";
+}
+
+@section scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+<h2>Create</h2>
+<form method="post">
+    @*<form method="post" action="@Url.Action("saveTodo","Todo")">*@
+    @*if the value is true,dont display isTaskDuplicated*@
+    @Html.ValidationSummary(true)
+    <div class="form-group">
+        <label for="Title">Title</label>
+        @Html.TextBoxFor(input => input.Title, new { @class = "form-control", placeholder = "Title" })
+        @Html.ValidationMessageFor(input => input.Title)
+        @*<input type="text" class="form-control" id="Title" name="Title" placeholder="Title">*@
+
+    </div>
+    <div class="form-group">
+        <label for="Description">Description</label>
+        @Html.TextBoxFor(input => input.Description, new { @class = "form-control", placeholder = "Description" })
+        @Html.ValidationMessageFor(input => input.Description)
+        @*<input type="text" class="form-control" id="Description" name="Description" placeholder="Description">*@
+    </div>
+    <div class="form-group">
+        <label for="DueDate">DueDate</label>
+        @Html.TextBoxFor(input => input.DueDate, new { @class = "form-control", placeholder = "DueDate" })
+        @*<input type="text" class="form-control" id="DueDate" name="DueDate" placeholder="DueDate">*@
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

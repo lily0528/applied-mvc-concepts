@@ -1,0 +1,34 @@
+﻿
+@model CreateMovieViewModel
+@{
+    ViewBag.Title = "Create";
+}
+
+@section scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+<h2>Create</h2>
+<form method="post">
+    <div class="form-group">
+        <label for="MovieName">Movie Name</label>
+        @Html.EditorFor(input => input.Name, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(input => input.Name)
+    </div>
+    <div class="form-group">
+        <label for="Rating">Rating</label>
+        @Html.Editor("Rating", "1") 1
+        @Html.Editor("Rating", "2") 2
+        @Html.Editor("Rating", "3") 3
+        @Html.Editor("Rating", "4") 4
+        @Html.RadioButton("Rating", "4") 5
+    </div>
+    <div class="form-group">
+        <label for="Category">Category</label>
+        @Html.DropDownList("Category",
+             new SelectList(Enum.GetValues(typeof(menu))),
+             "Select menu",
+             new { @class = "form-control" })
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+</form>

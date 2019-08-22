@@ -1,0 +1,43 @@
+﻿@model List<IndexMovieViewModel>
+
+@*//it same form MovieController, if don't it,foreach Model's data can't display*@
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<h2>List of Movie's</h2>
+@if (!Model.Any())
+{
+    <div>
+        <div><strong></strong></div>
+    </div>
+}
+
+<a class="btn btn-primary" href="@Url.Action("Create", "Movie")">Create New</a>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Rating</th>
+            <th>Category</th>
+            <th>Date Created</th>
+            <td></td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var record in Model)
+        {
+        <tr>
+            <td>@record.Id</td>
+            <td>@record.Name</td>
+            <td>@record.Rating</td>
+            <td>@record.Category</td>
+            <td>@record.CreateDate</td>
+            <td><a herf ="@Url.Action("Edit","Movie")">Edit</a></td>
+        </tr>
+        }
+    </tbody>
+</table>
+
